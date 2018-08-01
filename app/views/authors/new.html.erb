@@ -1,18 +1,18 @@
 <h2>Create an Author</h2>
 <%= form_tag authors_path, method: "post" do %>
-  <div class="field">
+  <div class="field<%= ' field_with_errors' if @person.errors[:name].any?%>">
     <%= label_tag "name", "Name" %>
-    <%= text_field_tag "name" %>
+    <%= text_field_tag "name", @person.name %>
   </div>
 
-  <div class="field">
+  <div class="field<%= 'field_with_errors' if @person.errors[:email].any?%>">
     <%= label_tag "email", "Email" %>
-    <%= text_field_tag "email" %>
+    <%= text_field_tag "email", @person.email %>
   </div>
 
-  <div class="field">
+  <div class="field<%= 'field_with_errors' if @person.errors[:phone_number].any?%>">
     <%= label_tag "phone_number", "Phone Number" %>
-    <%= text_field_tag "phone_number" %>
+    <%= text_field_tag "phone_number", @person.phone_number %>
   </div>
 
   <%= submit_tag "Create" %>
