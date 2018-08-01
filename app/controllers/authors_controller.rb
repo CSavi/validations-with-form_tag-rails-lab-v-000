@@ -14,9 +14,9 @@ class AuthorsController < ApplicationController
     redirect_to author_path(@author)
   end
 
-  def edit 
+  def edit
     find_author
-  end   
+  end
 
   private
 
@@ -26,5 +26,5 @@ class AuthorsController < ApplicationController
 
   def find_author
     @author = Author.find(params[:id])
-  end   
+  end
 end
