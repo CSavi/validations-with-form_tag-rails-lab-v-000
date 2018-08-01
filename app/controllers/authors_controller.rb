@@ -15,6 +15,7 @@ class AuthorsController < ApplicationController
   end
 
   def edit 
+    find_author
   end   
 
   private
