@@ -17,7 +17,7 @@
     <%= text_field_tag "name", @author.name %>
   </div>
 
-  <div class="field<%= 'field_with_errors' if @author.errors[:email].any? %>">
+  <div class="field<%= ' field_with_errors' if @author.errors[:email].any? %>">
     <%= label_tag "email", "Email" %>
     <%= text_field_tag "email", @author.email %>
   </div>
@@ -28,4 +28,4 @@
   </div>
 
   <%= submit_tag "Create" %>
-<% end %>  
+<% end %>
