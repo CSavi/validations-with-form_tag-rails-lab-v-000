@@ -3,9 +3,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def edit
-    @post = Post.find(params[:id])
-  end
+  
 
   def update
     @post = Post.find(params[:id])
@@ -14,7 +12,7 @@ class PostsController < ApplicationController
       redirect_to post_path(@post)
     else
       render "edit"
-    end   
+    end
   end
 
   private
